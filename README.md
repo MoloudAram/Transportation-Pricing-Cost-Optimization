@@ -1,7 +1,7 @@
 # Company-Logistics-Transportation-Pricing-Cost-Optimization
 A real-world logistics analytics case study for transportation capacity planning, cost calculation, and pricing standardization.
-### Product Master Data
-        ↓
+### Product Master Data :
+       
 Volume / Weight Analysis
         ↓
 Vehicle Capacity Constraint
