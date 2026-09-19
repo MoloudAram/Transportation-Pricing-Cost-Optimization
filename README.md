@@ -1,3 +1,4 @@
+
 # Transportation Pricing & Cost Optimization
 
 ## Real-World Logistics Analytics Case Study
@@ -73,5 +74,19 @@ is primarily constrained by volume or weight.
 ---
 
 ## Project Structure
-
+├── data/                  # Placed main.xlsx 
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_capacity_analysis.ipynb
+│   └── 03_transportation_pricing.ipynb
+├── src/
+│   └── transportation_cost_calculator.py
+├── results/                        # Generated output files
+├── figures
+├── tabeles
+│── Results.md              
+├──docs/
+├── 01_business_problem.md
+├── 02_Transportation_Pricing_Methodology.md
+└── 03_business_insights.md
 ...
