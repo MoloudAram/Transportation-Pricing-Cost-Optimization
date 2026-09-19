@@ -21,7 +21,7 @@ LOADING_PCT = 0.15           # 15%
 
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_PATH = BASE_DIR / "data" / "main.xlsx"
+DATA_PATH = BASE_DIR / "data" / "raw" / "main.xlsx"
 RESULTS_DIR = BASE_DIR / "results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 

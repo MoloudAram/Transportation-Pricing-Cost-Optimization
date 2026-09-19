@@ -45,6 +45,14 @@ The model identifies which constraint is binding for each product. This helps un
 - Province-level median distances are useful for high-level planning, while city-level distances reveal significant cost differences within the same province.
 - Grouping products by shipping group makes cost matrices more practical for commercial and planning teams.
 
+## Visual Results
+
+![Limiting Factor Distribution](results/01_limiting_factor_distribution.png)
+
+![Distance vs Cost](results/02_distance_vs_cost.png)
+
+![Average Cost by Province](results/03_avg_cost_by_province.png)
+
 ## Project Structure
 
 ```
