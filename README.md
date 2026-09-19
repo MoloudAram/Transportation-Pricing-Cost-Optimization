@@ -56,7 +56,7 @@ The model identifies which constraint is binding for each product. This helps un
 ```
 ## How to Run
 
-1. Place your `main.xlsx` file (sheets: `Data` and `LOC`) inside the `data/` folder.
+1. Place your `main.xlsx` file (sheets: `Data` and `Loc`) inside the `data/` folder.
 2. Install dependencies:
 
 ```bash
