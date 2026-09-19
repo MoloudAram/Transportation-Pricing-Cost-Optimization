@@ -54,7 +54,6 @@ The model identifies which constraint is binding for each product. This helps un
     ├── 02_Transportation_Pricing_Methodology.md
     └── 03_business_insights.md
 ```
-
 ## How to Run
 
 1. Place your `main.xlsx` file (sheets: `Data` and `LOC`) inside the `data/` folder.
@@ -62,11 +61,9 @@ The model identifies which constraint is binding for each product. This helps un
 
 ```bash
 pip install pandas numpy openpyxl
-```
 
 3. Run the calculator:
 
-```bash
 python src/transportation_cost_calculator.py
 ```
 
@@ -101,4 +98,3 @@ Or open the notebooks in order and execute the cells.
 
 - Real commercial rates and company-specific data are not included in this repository.
 - The calculation logic is fully documented; actual tariff values remain confidential.
-```
