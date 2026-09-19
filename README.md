@@ -38,6 +38,13 @@ Maximum loadable quantity is determined by the tighter of two constraints:
 
 The model identifies which constraint is binding for each product. This helps understand whether efficiency is limited by space or by weight.
 
+## Key Insights
+
+- Many products are limited by volume rather than weight, leaving unused payload capacity on the truck.
+- Transportation cost increases sharply with distance because insurance and percentage-based surcharges are applied on top of the base cost.
+- Province-level median distances are useful for high-level planning, while city-level distances reveal significant cost differences within the same province.
+- Grouping products by shipping group makes cost matrices more practical for commercial and planning teams.
+
 ## Project Structure
 
 ```

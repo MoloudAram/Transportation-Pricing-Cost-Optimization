@@ -100,7 +100,7 @@ def load_data(data_path=None):
     if data_path is None:
         data_path = DATA_PATH
 
-    df_loc = pd.read_excel(data_path, sheet_name="LOC")
+    df_loc = pd.read_excel(data_path, sheet_name="Loc")
     df_data = pd.read_excel(data_path, sheet_name="Data")
 
     # Product data
