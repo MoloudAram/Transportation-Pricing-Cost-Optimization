@@ -1,92 +1,104 @@
 
 # Transportation Pricing & Cost Optimization
 
-## Real-World Logistics Analytics Case Study
-
-A real-world logistics analytics case study focused on transportation
-capacity planning, freight cost calculation, and pricing standardization.
-
----
+Real-world logistics analytics case study for transportation capacity planning, freight cost calculation, and pricing standardization.
 
 ## Business Problem
 
-Transportation pricing in large-scale logistics operations can become
-complex when multiple factors influence the final cost, including:
+In large-scale logistics operations, transportation pricing is influenced by multiple factors:
 
-- Product dimensions and weight
-- Vehicle capacity
-- Transportation distance
-- Destination
+- Product volume and weight
+- Vehicle capacity constraints
+- Distance to destination
 - Shipping group
-- Loading and unloading costs
+- Loading/unloading costs
 - Road transportation charges
 
-The objective was to develop a structured and transparent pricing
-calculation framework that could support logistics planning and
-transportation cost optimization.
-
----
+The goal of this project was to build a transparent and consistent calculation framework that supports logistics planning and cost optimization.
 
 ## Analytical Approach
 
-The solution follows the following workflow:
-
-1. Product Master Data Preparation
-2. Volume & Weight Analysis
-3. Vehicle Capacity Constraint Analysis
-4. Loading Quantity Calculation
-5. Limiting Factor Detection
-6. Destination & Distance Mapping
-7. Transportation Cost Calculation
-8. Shipping Group × Province Pricing
-9. Shipping Group × City Pricing
-10. Product × Province Pricing
-11. Standardized Pricing Tables
-
----
+1. Product master data preparation  
+2. Volume & weight analysis  
+3. Vehicle capacity constraint analysis  
+4. Loading quantity calculation  
+5. Limiting factor detection (volume vs weight)  
+6. Destination & distance mapping  
+7. Transportation cost calculation  
+8. Shipping Group × Province pricing  
+9. Shipping Group × City pricing  
+10. Product × Province pricing  
 
 ## Business Logic
 
-The maximum loading quantity is determined by the limiting vehicle
-capacity constraint:
+Maximum loadable quantity is determined by the tighter of two constraints:
 
-- Volume capacity
-- Weight capacity
+- Volume capacity  
+- Weight capacity  
 
-The effective loading quantity is determined by whichever constraint
-is reached first.
-
-This allows the model to identify whether transportation efficiency
-is primarily constrained by volume or weight.
-
----
-
-## Technology
-
-- Python
-- Pandas
-- NumPy
-- Excel
-- Data Analysis
-- Logistics Analytics
-- Transportation Cost Modeling
-
----
+The model identifies which constraint is binding for each product. This helps understand whether efficiency is limited by space or by weight.
 
 ## Project Structure
-├── data/                  # Placed main.xlsx 
+
+```
+├── data/                          # Input data (main.xlsx – not published)
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
 │   ├── 02_capacity_analysis.ipynb
 │   └── 03_transportation_pricing.ipynb
 ├── src/
 │   └── transportation_cost_calculator.py
-├── results/                        # Generated output files
-├── figures
-├── tabeles
-│── Results.md              
-├──docs/
-├── 01_business_problem.md
-├── 02_Transportation_Pricing_Methodology.md
-└── 03_business_insights.md
-...
+├── results/                       # Generated output files
+└── docs/
+    ├── 01_business_problem.md
+    ├── 02_Transportation_Pricing_Methodology.md
+    └── 03_business_insights.md
+```
+
+## How to Run
+
+1. Place your `main.xlsx` file (sheets: `Data` and `LOC`) inside the `data/` folder.
+2. Install dependencies:
+
+```bash
+pip install pandas numpy openpyxl
+```
+
+3. Run the calculator:
+
+```bash
+python src/transportation_cost_calculator.py
+```
+
+Or open the notebooks in order and execute the cells.
+
+## Output Files
+
+| File | Description |
+|------|-------------|
+| `01_Product_Capacity.xlsx` | Loading quantity, loaded weight and limiting factor per product |
+| `02_Group_Summary.xlsx` | Summary statistics by shipping group |
+| `03_Group_x_Province.xlsx` | Cost matrix: Shipping Group × Province |
+| `04_Group_x_City.xlsx` | Cost matrix: Shipping Group × City |
+| `05_Product_x_Province_FULL.csv` | Full Product × Province cost matrix |
+| `05_Product_x_Province_Sample.xlsx` | Sample of the above for easier viewing |
+
+## Documentation
+
+- [Business Problem](docs/01_business_problem.md)
+- [Transportation Pricing Methodology](docs/02_Transportation_Pricing_Methodology.md)
+- [Business Insights](docs/03_business_insights.md)
+
+## Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Excel / openpyxl
+- Jupyter Notebook
+
+## Notes
+
+- Real commercial rates and company-specific data are not included in this repository.
+- The calculation logic is fully documented; actual tariff values remain confidential.
+```
