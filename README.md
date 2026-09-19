@@ -61,13 +61,11 @@ The model identifies which constraint is binding for each product. This helps un
 
 ```bash
 pip install pandas numpy openpyxl
-
+```
 3. Run the calculator:
-
+```
 python src/transportation_cost_calculator.py
 ```
-
-Or open the notebooks in order and execute the cells.
 
 ## Output Files
 
