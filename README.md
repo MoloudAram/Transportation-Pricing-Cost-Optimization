@@ -47,11 +47,11 @@ The model identifies which constraint is binding for each product. This helps un
 
 ## Visual Results
 
-![Limiting Factor Distribution](results/01_limiting_factor_distribution.png)
+![Limiting Factor Distribution](results/figures/01_limiting_factor_distribution.png)
 
-![Distance vs Cost](results/02_distance_vs_cost.png)
+![Distance vs Cost](results/figures/02_distance_vs_cost.png)
 
-![Average Cost by Province](results/03_avg_cost_by_province.png)
+![Average Cost by Province](results/figures/03_avg_cost_by_province.png)
 
 ## Project Structure
 
